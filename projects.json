@@ -1,0 +1,32 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "PenguiNews",
+            "link": "",
+            "img": "penguin.png",
+            "dsc": "PenguiNews is a global news website built using React, JSX, CSS, and Bootstrap. It provides users with up-to-date news from around the world, presented in a user-friendly and responsive design."
+        },
+        {
+            "id": 2,
+            "name": "Handle-Text",
+            "link": "https://handletext.netlify.app/",
+            "img": "HandleText.png",
+            "dsc": "Handele-Text is simple React-based website designed for efficiently analyzing text. It offers features such as word count, character count, and the ability to remove spaces from text, making it a handy tool for text-related tasks."
+        },
+        {
+            "id": 3,
+            "name": "Cara",
+            "link": " https://onkarp300.github.io/Ecom.github.io/",
+            "img": "cara.png",
+            "dsc": "Cara is responsive E-commerce website that utilizes HTML,CSS and javaScript."
+        },
+        {
+            "id": 4,
+            "name": "SpicyNet",
+            "link": "https://onkarp300.github.io/Spicy-Net.github.io/",
+            "img": "spicynet.png",
+            "dsc": "SpicyNet is a responsive food delivery website which is developed using HTML and CSS."
+        }
+    ]
+}

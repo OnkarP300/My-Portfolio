@@ -1,0 +1,60 @@
+.skills {
+    background: linear-gradient(180deg, #414154, #0c0c1d);
+    overflow: hidden;
+
+    hr {
+        border: 2px solid white;
+        border-radius: 2px;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        overflow: hidden;
+
+        img {
+            width: 200px;
+            object-fit: contain;
+        }
+
+        .textA {
+            margin-right: 10px;
+            background: linear-gradient(180deg, #ebd107, #71eadc);
+            background-Clip: text;
+            color: transparent;
+            font-weight: 800;
+            font-size: 70px;
+        }
+
+        h2 {
+            margin-bottom: 16px;
+        }
+    }
+
+    .skillList {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: 200px 200px 200px 200px;
+        justify-content: center;
+        align-items: center;
+        gap: 50px 100px;
+
+        .listItems {
+            // height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // gap: 50px;
+
+            img {
+                width: 100px;
+            }
+
+            h2 {
+                margin-top: 10px;
+            }
+        }
+    }
+}

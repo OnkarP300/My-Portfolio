@@ -1,0 +1,47 @@
+.parallax {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    h1 {
+
+        font-size: 100px;
+        z-index: 3;
+        background: linear-gradient(180deg, #ebd107, #71eadc);
+        background-clip: text;
+        color: transparent;
+    }
+
+    .mountains {
+        background-image: url("./mountains.png");
+        background-size: cover;
+        background-position: bottom;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+
+    }
+
+    .day {
+        background-image: url("./sun1.png");
+        position: absolute;
+        z-index: 2;
+        overflow: "hidden",
+    }
+
+    .stars {
+        background-size: cover;
+        background-position: bottom;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+
+}

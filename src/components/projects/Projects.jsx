@@ -9,7 +9,7 @@ const NewSection = ({ item }) => {
     target: ref,
     // offset: ["start start", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], [-200, 200]);
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
   return (
     <section>
       <motion.div className="project-container">
@@ -38,7 +38,7 @@ const pTextVariant = {
     scale: 1,
     opacity: 1,
     transition: {
-      // duration: 0.5,
+      duration: 0.5,
       delay: 0.2,
       ease: "easeOut",
     },
@@ -66,7 +66,7 @@ export const Projects = () => {
 
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["end end", "start start"],
+    offset: ["end start", "start start"],
   });
 
   const scaleX = useTransform(scrollYProgress, [1, 0], ["100%", "0%"]);

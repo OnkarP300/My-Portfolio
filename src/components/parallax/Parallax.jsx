@@ -25,8 +25,8 @@ const dayStyle = {
     clipPath: "circle(50%)",
     backgroundSize: "cover",
     backgroundPosition: "center",
-    width: "400px",
-    height: "400px",
+    width: "300px",
+    height: "300px",
   },
   moon: {
     clipPath: "circle(45%)",

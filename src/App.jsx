@@ -4,6 +4,7 @@ import { Navbar } from "./components/navbar/Navbar";
 import { Parallax } from "./components/parallax/Parallax";
 import { Projects } from "./components/projects/Projects";
 import { Skills } from "./components/skills/Skills";
+import { Contact } from "./components/contact/Contact";
 
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
       <Projects />
 
       <section id="Contact">
-        <a href="">Contact</a>
+        <Contact />
       </section>
     </div>
   );

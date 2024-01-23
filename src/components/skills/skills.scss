@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .skills {
     background: linear-gradient(180deg, #414154, #0c0c1d);
     overflow: hidden;
@@ -13,9 +15,18 @@
         align-items: end;
         overflow: hidden;
 
+
         img {
             width: 200px;
             object-fit: contain;
+
+            @include mobile {
+                width: 100px;
+            }
+
+            @include tablet {
+                width: 180px;
+            }
         }
 
         .textA {
@@ -25,10 +36,25 @@
             color: transparent;
             font-weight: 800;
             font-size: 70px;
+
+            @include mobile {
+                margin: 150px 15px 0 15px;
+                font-size: 50px;
+            }
+
+            @include tablet {
+                margin: 200px 20px 0 20px;
+                font-size: 70px;
+            }
         }
 
         h2 {
             margin-bottom: 16px;
+
+            @include mobile {
+                font-size: 15px;
+                margin-bottom: 5px;
+            }
         }
     }
 
@@ -40,20 +66,60 @@
         align-items: center;
         gap: 50px 100px;
 
+        @include mobile {
+            margin-top: 80px;
+            grid-template-columns: 130px 130px 130px;
+            justify-content: space-between;
+            align-items: start;
+            gap: 60px 0px;
+        }
+
+        @include tablet {
+            margin-top: 100px;
+            grid-template-columns: 200px 200px 200px;
+            row-gap: 100px;
+        }
+
         .listItems {
             // height: 200px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            // gap: 50px;
+            gap: 50px;
+
+            @include mobile {
+                gap: 20px;
+            }
+
+            @include tablet {
+                gap: 20px;
+            }
 
             img {
                 width: 100px;
+
+                @include mobile {
+                    width: 60px !important;
+                }
+
+                @include tablet {
+                    width: 100px;
+                }
             }
 
             h2 {
                 margin-top: 10px;
+
+                @include mobile {
+                    margin-top: unset;
+                    text-align: center;
+                    font-size: 18px !important;
+                }
+
+                @include tablet {
+                    font-size: 25px;
+                }
             }
         }
     }

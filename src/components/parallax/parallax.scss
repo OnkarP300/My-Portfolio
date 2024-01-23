@@ -1,3 +1,5 @@
+@import "../../app.scss";
+
 .parallax {
     position: relative;
     display: flex;
@@ -25,14 +27,25 @@
         height: 100%;
         z-index: 4;
 
+        @include mobile {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @include tablet {
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
     }
 
     .day {
-        background-image: url("./sun1.png");
         position: absolute;
+        background-image: url("./sun1.png");
         z-index: 2;
         overflow: "hidden",
     }
+
 
     .stars {
         background-size: cover;

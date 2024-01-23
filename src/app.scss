@@ -24,3 +24,21 @@ section {
     height: 100vh;
     scroll-snap-align: center;
 }
+
+@mixin mobile {
+    @media only screen and (max-width:738px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (max-width:1024px) and (min-width : 739px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (max-width:1366px) and (min-width : 1025px) {
+        @content;
+    }
+}

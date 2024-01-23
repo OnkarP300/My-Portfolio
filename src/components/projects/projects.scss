@@ -1,13 +1,4 @@
-// .pHead {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     img {
-//         width: 200px;
-//     }
-// }
-
+@import "../../app.scss";
 
 .projects {
     position: relative;
@@ -20,20 +11,32 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: sticky; // Change from sticky to fixed
+        position: sticky;
         top: 0;
-        left: 0; // Add left: 0; to ensure it sticks to the left
-        width: 100%; // Add width: 100%; to take full width
+        left: 0;
+        width: 100%;
         z-index: 1;
         overflow: hidden;
 
+        @include mobile {
+            padding-top: 100px;
+        }
+
         .head {
             display: flex;
+            position: relative;
 
             img {
                 position: absolute;
-                left: 520px;
+                position: absolute;
+                left: -100px;
                 height: 100px;
+
+                @include mobile {
+                    width: 70px;
+                    height: 70px;
+                    left: -70px;
+                }
             }
 
             h1 {
@@ -42,6 +45,10 @@
                 background: linear-gradient(180deg, #ebd107, #71eadc);
                 background-clip: text;
                 color: transparent;
+
+                @include mobile {
+                    font-size: 50px;
+                }
             }
         }
 
@@ -62,9 +69,34 @@
         justify-content: center;
         align-items: center;
 
+        @include mobile {
+            flex-direction: column;
+            gap: 120px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            gap: 200px;
+            width: 100%;
+            padding: 100px;
+        }
+
         .image-container {
             width: 500px;
             flex: 1;
+
+            @include mobile {
+                width: 100%;
+                margin-top: 200px;
+                flex: unset;
+            }
+
+            @include tablet {
+                width: 100%;
+                flex: unset;
+            }
 
             img {
                 border-radius: 10px;
@@ -78,6 +110,17 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            z-index: -1;
+
+            @include mobile {
+                width: 100%;
+                flex: unset;
+            }
+
+            @include tablet {
+                width: 100%;
+                flex: unset;
+            }
 
             h1 {
                 font-size: 40px;

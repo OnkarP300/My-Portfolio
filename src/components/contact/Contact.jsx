@@ -1,6 +1,8 @@
 import "./contact.scss";
+import { useState } from "react";
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { animate, motion, useInView } from "framer-motion";
+import emailjs from "@emailjs/browser";
 
 const variants = {
   // Text
@@ -44,6 +46,11 @@ const variants = {
 };
 
 export const Contact = () => {
+  // Contact EmailJS
+  const formRef = useRef();
+  const [error, setError] = useState(false);
+  const [Success, setSuccess] = useState(false);
+
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
   console.log(isInView);
@@ -58,6 +65,27 @@ export const Contact = () => {
         duration: 2,
       },
     },
+  };
+
+  // Contact from EmailJS
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_i5oq5fc",
+        "template_qtz27xg",
+        formRef.current,
+        "afj396Fy5n5gHhOOv"
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+        },
+        (error) => {
+          setError(true);
+        }
+      );
   };
 
   return (
@@ -84,21 +112,23 @@ export const Contact = () => {
       </motion.div>
       <motion.div className="formContainer">
         <motion.form
+          ref={formRef}
+          onSubmit={sendEmail}
           variants={variants}
           initial="hidden1"
           whileInView="visible1"
         >
-          <input type="text" required placeholder="Name" />
-          <input type="email" required placeholder="Email" />
-          <textarea rows="8" placeholder="Message" />
+          <input type="text" required placeholder="Name" name="name" />
+          <input type="email" required placeholder="Email" name="email" />
+          <textarea rows="8" placeholder="Message" name="message" />
           <button>Submit</button>
+          {error && "Error"}
+          {Success && "Success"}
         </motion.form>
         <motion.div className="phoneSvg">
           <motion.svg
             fill="none"
             id="Capa_1"
-            width="400px"
-            height="400px"
             viewBox="0 0 35 35"
             variants={variants}
             initial="hidden2"

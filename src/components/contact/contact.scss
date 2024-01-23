@@ -1,10 +1,30 @@
+@import "../../app.scss";
+
 .contact {
     height: 100%;
     max-width: 1100px;
     margin: auto;
     display: flex;
-    align-items: center;
+    align-items: start;
+    justify-content: center;
     gap: 50px;
+
+    @include mobile {
+        flex-direction: column;
+        max-width: unset;
+        width: 100%;
+        padding: 100px 50px 50px 50px;
+        gap: 80px;
+
+    }
+
+    @include tablet {
+        flex-direction: column;
+        max-width: unset;
+        width: 50%;
+        gap: 80px;
+
+    }
 
     .textContainer {
         flex: 1;
@@ -12,10 +32,28 @@
         flex-direction: column;
         gap: 40px;
 
+        @include mobile {
+            flex: unset;
+            gap: 20px;
+        }
+
+        @include tablet {
+            flex: unset;
+            gap: 20px;
+        }
+
         h1 {
             font-size: 80px;
             line-height: 80px;
             font-weight: 800;
+
+            @include mobile {
+                font-size: 50px;
+            }
+
+            @include tablet {
+                font-size: 80px;
+            }
         }
 
         .item {
@@ -35,16 +73,29 @@
         flex: 1;
         position: relative;
 
+        @include mobile {
+            flex: unset;
+            width: 100%;
+        }
+
+        @include tablet {
+            flex: unset;
+            width: 100%;
+        }
+
         form {
             display: flex;
             flex-direction: column;
             gap: 20px;
+
+
 
             input {
                 background-color: transparent;
                 border: 1px solid white;
                 border-radius: 5px;
                 padding: 10px;
+                color: white;
             }
 
             textarea {
@@ -52,6 +103,7 @@
                 border: 1px solid white;
                 border-radius: 5px;
                 padding: 10px;
+                color: white;
             }
 
             button {
@@ -69,7 +121,19 @@
                 top: 0;
                 position: absolute;
                 margin: auto;
+                z-index: -1;
+                width: 400px;
+                height: 400px;
 
+                @include mobile {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                @include tablet {
+                    width: 100%;
+                    margin: auto;
+                }
             }
         }
     }

@@ -1,7 +1,7 @@
 import "./contact.scss";
 import { useState } from "react";
 import { useRef } from "react";
-import { animate, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
 const variants = {
@@ -53,7 +53,6 @@ export const Contact = () => {
 
   const ref = useRef();
   const isInView = useInView(ref, { margin: "-100px" });
-  console.log(isInView);
 
   const pathVariants = {
     hidden: {

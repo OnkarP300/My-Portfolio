@@ -19,7 +19,7 @@
     }
 
     .mountains {
-        background-image: url("./mountains.png");
+        background-image: url("/public/mountains.png");
         background-size: cover;
         background-position: bottom;
         position: absolute;
@@ -41,7 +41,7 @@
 
     .day {
         position: absolute;
-        background-image: url("./sun1.png");
+        background-image: url("/public/sun1.png");
         z-index: 2;
         overflow: "hidden",
     }

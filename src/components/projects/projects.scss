@@ -110,7 +110,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            z-index: -1;
+            z-index: 1;
 
             @include mobile {
                 width: 100%;
@@ -134,8 +134,10 @@
 
             a {
                 outline: none;
+                width: 110px;
 
                 button {
+                    cursor: pointer;
                     padding: 5px 10px;
                     border: 1px solid black;
                     font-size: 20px;

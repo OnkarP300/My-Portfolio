@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "PenguiNews",
-            "link": "",
+            "link": "https://penguinews.netlify.app/",
             "img": "penguin.png",
             "dsc": "PenguiNews is a global news website built using React, JSX, CSS, and Bootstrap. It provides users with up-to-date news from around the world, presented in a user-friendly and responsive design."
         },

@@ -72,7 +72,7 @@ export const Hero = () => {
             <motion.h1 variants={textVariants}>
               Front-End Web Developer
             </motion.h1>
-            <a href="/public/Onkar Patil-Resume.pdf" target="_blank">
+            <a href="/Onkar Patil (resume).pdf" target="_blank">
               <div className="button">
                 <motion.button variants={textVariants}>Resume</motion.button>
               </div>

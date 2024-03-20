@@ -25,7 +25,7 @@ export const Links = () => {
       opacity: 0,
     },
   };
-  const items = ["Homepage", "Skills", "Projects", "Contact"];
+  const items = ["Homepage", "Skills", "Project", "Contact"];
   return (
     <motion.div className="links" variants={variants}>
       {items.map((item) => (
